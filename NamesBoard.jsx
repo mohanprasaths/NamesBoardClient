@@ -8,10 +8,10 @@ var NamesBoard = React.createClass({
 	render(){
 	console.log(this.props.value)
 	var data = this.props.value
-	console.log(data)
+	console.log("react data	"+data)
 	return(
 		<div>
-		{data.map((name,index)=>  <Name value={name} key={index}/>)}
+		{data.map((name,index)=>  <Name value={name.name} key={index}/>)}
 		</div>
 	)
 	}
@@ -20,7 +20,7 @@ var NamesBoard = React.createClass({
 var Name = React.createClass({
 	render(){
 	return(
-		<label> {this.props.value}</label>
+		<label className="singleName"> {this.props.value}</label>
 	)
 	}
 })

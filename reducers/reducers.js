@@ -29,6 +29,8 @@ function Names(state=[],action){
 	}
 }
 
+
+
 const ADDAPP = combineReducers({
 	ADDR,ADDB,Names
 })

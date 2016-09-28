@@ -12,8 +12,11 @@ var CounterBlue =  React.createClass({
 	render(){
 	return(
 	<div>
-		<input type="button" value="BlueAdd" onClick={this.IncrementBlue}/>
-				<label>{this.props.value}</label>
+		<input type="button"  className="blueAdd" value="BlueAdd" onClick={this.IncrementBlue}/>
+				<div className="blueCount">
+				<div >{this.props.value}</div >
+				<label className="blueNotes">Value from server</label>
+				</div>
 				</div>
 	)
 	}

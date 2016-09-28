@@ -40,19 +40,18 @@ export function updateNames(namesJson){
 	console.log(namesJson)
 	return {
 		type : UPDATENAMES,
-		data : namesJson.names
+		data : namesJson.data
 	}
 }
 
 export function getNames(){
 	return dispatch => {
-	return fetch(URL+'/getAllNames',{method:'GET',headers:{'Access-Control-Request-Headers': '*','Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}}).then(response=>response.json()).then(json=>dispatch(updateNames(json)))
+	return fetch(URL+'/getNames',{method:'GET',headers:{'Access-Control-Request-Headers': '*','Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}}).then(response=>response.json()).then(json=>dispatch(updateNames(json)))
 }
 }
 
 export function PUSHVALUE(names){
 		    let bodyStr = "name=" + encodeURIComponent(names);
-
 		return dispatch => {
 			return fetch(URL+'/getData', {  
  //pass cookies, for authentication

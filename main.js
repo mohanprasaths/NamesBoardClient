@@ -6,6 +6,6 @@ import { Provider } from 'react-redux'
 import ADDAPP from './reducers/reducers'
 import configureStore from './configureStore'
 
-let store = configureStore({Names:{names:[]}})
+let store = configureStore({Names:{names:[]},ADDR:{red:0},ADDB:{blue:0}})
 
 ReactDOM.render(<Provider store={store}><App></App></Provider>,document.getElementById('app'))
